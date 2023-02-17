@@ -33,4 +33,6 @@ chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
-nohup java -jar $REPOSITORY/fitflow-0.0.1-SNAPSHOT.jar &
+nohup java -jar \
+    -Dspring.config.location=classpath:/application.properties \
+    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
