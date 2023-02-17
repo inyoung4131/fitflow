@@ -10,13 +10,35 @@
 <button onclick="test()">start</button>
 </body>
 <script>
-    function good(){
-
+    function login() {
+        const loginDTO = {
+            "email": $(`#email`).val(), "password": $(`#pwd`).val()
+        }
+        fetch("/auth/login", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8"
+            },
+            body: JSON.stringify(loginDTO)
+        }).then((res) => {
+            if(res.status===200){
+                history.back();
+            }
+        });
     }
-    function test(){
-        fetch("/login",{
 
-        })
+    function signup() {
+        fetch("/auth/signup", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8"
+            },
+            body: JSON.stringify({
+                "userId": $(`#email`).val(), "userPwd": $(`#pwd`).val(), "userNickname": "dlsdud"
+            })
+        }).then(res => {
+            console.log(res);
+        });
     }
 </script>
 </html>
