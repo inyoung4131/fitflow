@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/fitflow/fitflow/test
+REPOSITORY=/home/ec2-user/test
 PROJECT_NAME=fitflow
 
 echo "> Build 파일 복사"
