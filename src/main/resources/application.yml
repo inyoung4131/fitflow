@@ -24,8 +24,8 @@ spring:
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
     password: '0000'
-    username: 'fitflow'
-    url: jdbc:mariadb://fitflow.co1hyn5ouefl.ap-northeast-1.rds.amazonaws.com:3306/fitflow?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul;
+    username: 'fitflowdev'
+    url: jdbc:mariadb://35.79.8.201:3306/fitflow
   profiles:
     include: oauth0p;
   data:
